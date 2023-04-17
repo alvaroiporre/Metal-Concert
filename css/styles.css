@@ -1,0 +1,319 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* font-family: 'Finger Paint', cursive; */
+  --primary-color: #ec5242;
+  --dark-color: #272a31;
+  --gray-color: #d3d3d3;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  min-width: 375px;
+}
+
+.nav-dark {
+  display: none;
+}
+
+.nav-image {
+  width: 100px;
+  margin: 0 auto;
+}
+
+.nav-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  left: 100%;
+  background-color: var(--dark-color);
+  mix-blend-mode: multiply;
+  backdrop-filter: blur(10px);
+  z-index: 2;
+  transition: 0.3s;
+}
+
+.menu_active {
+  left: 0;
+}
+
+.nav-list {
+  padding: 0;
+  width: 100%;
+}
+
+.nav-list li {
+  list-style: none;
+  padding: 5%;
+  border-bottom: #d3d3d3 1px solid;
+  margin: 0 10%;
+}
+
+.nav-list li a {
+  text-decoration: none;
+  color: var(--gray-color);
+  font-size: larger;
+  font-weight: 700;
+}
+
+.hamburguer {
+  margin: 15px;
+  z-index: 10;
+  position: absolute;
+}
+
+.bar {
+  width: 30px;
+  padding: 3px;
+  margin: 3px;
+  display: block;
+  background-color: #272a31;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.hamburguer.active .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburguer.active .bar:nth-child(1) {
+  transform: translateY(8.5px) rotate(45deg);
+  background-color: #fff;
+}
+
+.hamburguer.active .bar:nth-child(3) {
+  transform: translateY(-8.5px) rotate(-45deg);
+  background-color: #fff;
+}
+
+.home {
+  padding: 5% 0;
+}
+
+.main-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 15% 5%;
+  min-height: 100%;
+  background-color: #fff;
+}
+
+.main-subtitle {
+  color: var(--primary-color);
+  font-weight: 400;
+}
+
+.title {
+  font-weight: 900;
+  font-size: 2rem;
+  word-spacing: 0.5ch;
+  color: rgba(236, 82, 66, 1);
+}
+
+.paragraph-main {
+  color: var(--dark-color);
+  background-color: var(--gray-color);
+  border: #fff 2px solid;
+  padding: 10px;
+  margin: 20px 0;
+  font-size: medium;
+}
+
+.main-date .main-location {
+  color: var(--dark-color);
+}
+
+.main-program {
+  background-color: var(--dark-color);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 10% 5%;
+  text-align: center;
+}
+
+.program {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 5% 0;
+}
+
+.card-program {
+  display: flex;
+  gap: 5px;
+  background-color: rgba(211, 211, 211, 0.2);
+  margin-top: 2%;
+  align-items: center;
+  backdrop-filter: blur(5px);
+}
+
+.program-card-image {
+  padding: 10px;
+}
+
+.program-card-title {
+  color: var(--primary-color);
+  width: 30%;
+}
+
+.card-program-paragraph {
+  width: 50%;
+  padding: 10px;
+}
+
+.button {
+  color: #fff;
+  text-decoration: none;
+  background-color: var(--primary-color);
+  padding: 15px;
+  margin: 0 10%;
+}
+
+.artists-container {
+  text-align: center;
+}
+
+.title-artist {
+  margin: 5%;
+  color: var(--dark-color);
+}
+
+.artists {
+  display: flex;
+  flex-direction: column;
+}
+
+.artist-card {
+  display: flex;
+  gap: 20px;
+  margin: 10px 15px;
+  align-items: center;
+}
+
+.artist-image {
+  width: 30%;
+}
+
+.artist-card-content {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  text-align: left;
+}
+
+.artist-name {
+  font-weight: 600;
+}
+
+.artist-subtitle {
+  color: var(--primary-color);
+  font-weight: 400;
+  margin-bottom: 15px;
+}
+
+.artist-information {
+  font-weight: 400;
+  font-size: small;
+}
+
+.sponsors {
+  background-color: var(--dark-color);
+  text-align: center;
+}
+
+.sponsors-title {
+  color: #fff;
+  padding: 30px;
+}
+
+.sponsors-images {
+  padding: 20px 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+.about-subtitle {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.main-info-about {
+  text-align: center;
+  background-color: #f3f0f0;
+}
+
+.paragraph-about {
+  background-color: #fff;
+  border: var(--gray-color) 2px solid;
+}
+
+.email {
+  color: var(--dark-color);
+  font-weight: 600;
+}
+
+.aditional-info {
+  color: var(--dark-color);
+  padding: 10%;
+  text-align: center;
+}
+
+.paragraph-about-aditional {
+  padding: 5% 0;
+}
+
+.past-versions {
+  border-top: #d3d3d3 2px solid;
+  padding: 10% 5%;
+  text-align: center;
+}
+
+.past-versions-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.past-versions-card {
+  background-color: var(--primary-color);
+  color: #fff;
+  padding: 60px;
+}
+
+.past-version-title {
+  margin-bottom: 15px;
+}
+
+footer {
+  display: flex;
+  padding: 10% 5%;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-logo {
+  width: 45%;
+}
+
+.footer-content {
+  width: 50%;
+}
+
+.footer-content p {
+  padding: 5% 0;
+  font-size: small;
+}
