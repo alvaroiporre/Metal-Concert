@@ -290,7 +290,7 @@ body {
   padding: 20px 10px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-around;
   gap: 15px;
 }
 
