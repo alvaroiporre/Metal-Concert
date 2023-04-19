@@ -152,7 +152,6 @@ const aboutView = `<section class="about">
 </div>
 </section>`;
 function loadHomePage() {
-  footer.classList.remove('footer-dark');
   main.innerHTML = homeView;
   artists.forEach((artist) => {
     document.querySelector('.artists').innerHTML += `
@@ -166,6 +165,7 @@ function loadHomePage() {
       </div>
     </div>`;
   });
+  footer.classList.remove('footer-dark');
 }
 loadHomePage();
 
@@ -186,4 +186,5 @@ aboutButton.addEventListener('click', () => {
 
 logoHome.addEventListener('click', () => {
   main.innerHTML = homeView;
+  loadHomePage();
 });
