@@ -20,8 +20,9 @@ body {
 }
 
 .nav-image {
-  width: 100px;
+  width: 150px;
   margin: 0 auto;
+  padding: 5px;
 }
 
 .nav-main {
@@ -56,11 +57,19 @@ body {
   margin: 0 10%;
 }
 
+.nav-list li:nth-child(6) {
+  display: none;
+  color: var(--primary-color);
+}
+
 .nav-list li a {
   text-decoration: none;
   color: var(--gray-color);
   font-size: larger;
   font-weight: 700;
+}
+.nav-list li a:hover {
+  color: var(--primary-color);
 }
 
 .hamburguer {
@@ -93,17 +102,18 @@ body {
   background-color: #fff;
 }
 
-.home {
-  padding: 5% 0;
-}
+
 
 .main-info {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  padding: 15% 5%;
-  min-height: 100%;
-  background-color: #fff;
+  padding: 5%;
+  background-image: url('../images/metal_background.jpg');
+}
+
+.main-content {
+  margin-top: 15%;
 }
 
 .main-subtitle {
@@ -111,13 +121,21 @@ body {
   font-weight: 400;
 }
 
+
+
 .title {
-  font-weight: 900;
-  font-size: 2rem;
-  word-spacing: 0.5ch;
-  color: rgba(236, 82, 66, 1);
+  font-size: 3rem;
+  font-family: 'COCOGOOSE', sans-serif;
 }
 
+.fire {
+  background-image: url('../images/fuego.jpg');
+  background-size: cover;
+  background-position: center;
+  background-clip: text;-webkit-background-clip: text;
+  color: rgba(236, 82, 66, .5);
+  filter: saturate(1.3);
+}
 .paragraph-main {
   color: var(--dark-color);
   background-color: var(--gray-color);
@@ -132,7 +150,8 @@ body {
 }
 
 .main-program {
-  background-color: var(--dark-color);
+  background-image: url('../images/background_pattern.jpg');
+  background-size: 50%;
   color: #fff;
   display: flex;
   flex-direction: column;
@@ -141,6 +160,19 @@ body {
   text-align: center;
 }
 
+.underline {
+  display: block;
+  background-color: var(--primary-color);
+  width: 10%;
+  height: 2px;
+  margin: 2% 45%;
+  transition: 0.3s;
+}
+
+.underline:hover {
+  width: 20%;
+  margin: 2% 39%;
+}
 .program {
   display: flex;
   flex-wrap: wrap;
@@ -150,14 +182,17 @@ body {
 .card-program {
   display: flex;
   gap: 5px;
-  background-color: rgba(211, 211, 211, 0.2);
+  background-color: rgba(211, 211, 211, 0.1);
   margin-top: 2%;
   align-items: center;
-  backdrop-filter: blur(5px);
+  justify-content: space-around;
+  backdrop-filter: blur(1px);
 }
 
 .program-card-image {
   padding: 10px;
+  width: 100px;
+
 }
 
 .program-card-title {
@@ -168,6 +203,7 @@ body {
 .card-program-paragraph {
   width: 50%;
   padding: 10px;
+  font-weight: 300;
 }
 
 .button {
@@ -175,7 +211,8 @@ body {
   text-decoration: none;
   background-color: var(--primary-color);
   padding: 15px;
-  margin: 0 10%;
+  margin: 0 auto;
+  max-width: 300px;
 }
 
 .artists-container {
@@ -183,10 +220,16 @@ body {
 }
 
 .title-artist {
-  margin: 5%;
+  margin: 5% auto 0;
   color: var(--dark-color);
 }
 
+.line-artist {
+  height: 2px;
+  width: 15%;
+  background-color: var(--gray-color);
+  margin-top: -5%;
+}
 .artists {
   display: flex;
   flex-direction: column;
@@ -231,9 +274,14 @@ body {
   text-align: center;
 }
 
+.image-sponsor {
+  width: 100px;
+}
+
 .sponsors-title {
   color: #fff;
   padding: 30px;
+  padding-bottom: 0;
 }
 
 .sponsors-images {
@@ -284,17 +332,31 @@ body {
   display: flex;
   flex-direction: column;
   gap: 15px;
-  margin-top: 15px;
+  margin: 5%;
+  align-items: center;
 }
 
 .past-versions-card {
-  background-color: var(--primary-color);
   color: #fff;
   padding: 60px;
+  height: 15rem;
+  width: 90%;
+  background-size: cover;
+}
+
+.past1{
+  background-image: url('../images/past_version1.jpg');
+  
+}
+
+.past2{
+  background-image: url('../images/past_version2.jpg');
 }
 
 .past-version-title {
   margin-bottom: 15px;
+  font-size: xx-large;
+  font-family: 'COCOGOOSE', sans-serif;
 }
 
 footer {
@@ -303,6 +365,10 @@ footer {
   gap: 10px;
   justify-content: center;
   align-items: center;
+}
+
+.aditional-info img {
+  width: 80%;
 }
 
 .footer-logo {
@@ -316,4 +382,187 @@ footer {
 .footer-content p {
   padding: 5% 0;
   font-size: small;
+}
+
+
+@media screen and (min-width: 768px) {
+  .home {
+    padding-top: 0;
+  }
+  .icon {
+    width: 15px;
+  }
+  .nav-dark {
+    display: block;
+    background-color: var(--dark-color);
+    padding-right: 5%;
+  }
+
+  .nav-list-dark {
+    display: flex;
+    justify-content: flex-end;
+  }
+  .nav-list-dark li {
+    list-style: none;
+    padding: 5px;
+  }
+
+  .nav-list-dark li a {
+    color: #fff;
+    text-decoration: none;
+  }
+
+  #tickets {
+    border: var(--primary-color) 4px solid;
+    padding: 10px;
+    color: var(--primary-color);
+  }
+
+  .nav-list li:nth-child(6) {
+    display: block;
+  }
+
+  .hamburguer {
+    display: none;
+  }
+  .nav-main {
+    left: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: relative;
+    background-color: #fff;
+  }
+
+  .nav-list {
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    justify-content: flex-end;
+    padding-right: 5%;
+  }
+  
+  .nav-list li {
+    list-style: none;
+    padding: 10px;
+    border-bottom: none;
+    margin: 0;
+  }
+  
+  .nav-list li a {
+    text-decoration: none;
+    color: var(--dark-color);
+    font-size: larger;
+    font-weight: 700;
+  }
+  
+  .main-content {
+    max-width: 600px;
+    margin-left: 8%;
+    height: 60vh;
+    margin-top: 0;
+  }
+
+  .title {
+    font-size: xxx-large;
+  }
+
+  .main-subtitle {
+    font-size: x-large;
+  }
+
+  .program {
+    display: flex;
+    flex-direction: row;
+    gap: 1px;
+    justify-content: center;
+  }
+  
+  .card-program {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    background-color: rgba(211, 211, 211, 0.2);
+    margin-top: 2%;
+    backdrop-filter: blur(5px);
+    width: 19%;
+  }
+  
+  .program-card-image {
+    padding: 10px;
+  }
+  
+  .program-card-title {
+    color: var(--primary-color);
+    width: 30%;
+  }
+  
+  .card-program-paragraph {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .artists-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .artists {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0 5% 10%;
+    gap: 10px;
+    max-width: 900px;
+  }
+
+  .artist-card {
+    width: 40%;
+  }
+
+  .artist-image {
+    width: 30%;
+  }
+  
+  .artist-card-content {
+    width: 70%;
+  }
+  
+  .sponsors {
+    padding: 0 5% 5%;
+  }
+
+  .main-info-about {
+    padding: 0;
+    margin: 0;
+    align-items: center;
+  }
+
+  .about-content {
+    max-width: 700px;
+    padding: 5%;
+  }
+
+  .about-subtitle {
+    font-size: x-large;
+  }
+
+  .aditional-info {
+    padding: 10% 15%;
+  }
+  
+  .past-versions-cards {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .past-versions-card {
+    width: 50%;
+  }
+
+  .past-version-title {
+    font-size: xx-large;
+  }
 }
