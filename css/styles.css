@@ -500,7 +500,7 @@ footer {
 
   .program-card-title {
     color: var(--primary-color);
-    width: 30%;
+    width: 100%;
   }
 
   .card-program-paragraph {
