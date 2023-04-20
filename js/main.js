@@ -1,9 +1,5 @@
 const hamburguer = document.querySelector('.hamburguer');
 const navMain = document.querySelector('.nav-main');
-const main = document.querySelector('main');
-const logoHome = document.getElementById('logo-home');
-const aboutButton = document.getElementById('about');
-const footer = document.querySelector('.footer');
 
 const artists = [
   {
@@ -44,113 +40,7 @@ const artists = [
   },
 ];
 
-const homeView = `
-<div class="home">
-<section class="main-info">
-  <div class="main-content">
-        
-    <h2 class="main-subtitle fire">"Hello! Rockers!"</h2>
-    <h1 class="title fire">Rock & Roll 2023    XXX EDITION</h1>
-    <p class="paragraph-main">“We have realized that our weapons to make the world a little better are music and the festival. This is what We know how to do well.”</p>
-    <h2 class="main-date">OCTOBER 15 ~ 17 - 2023</h2>
-    <h2 class="main-location">Potosi - Bolivia, Second Avenue to the Stadion Victor Agustin Ugarte</h2>
-  </div>
-</section>
-<section class="main-program">
-    <h2 class="program-title">Main Activities</h2>
-    <span class="underline"></span>
-    <div class="program">
-        <div class="card-program">
-            <img class="program-card-image" src="images/icon_drinks.png" alt="card-logo">
-            <h3 class="program-card-title">Free Drinks</h3>
-            <p class="card-program-paragraph">No Alcoholic drinks are included along the festival.</p>
-        </div>
-        <div class="card-program">
-            <img class="program-card-image" src="images/icon_live.png" alt="card-logo">
-            <h3 class="program-card-title">Live Music</h3>
-            <p class="card-program-paragraph">While you are waiting the main artists, there are band who will play awsome music live.</p>
-        </div>
-        <div class="card-program">
-            <img class="program-card-image" src="images/icon_merchandicing.png" alt="card-logo">
-            <h3 class="program-card-title">Merchandise</h3>
-            <p class="card-program-paragraph">During the festival there will be a lot of merchandicing from the main artists.</p>
-        </div>
-        <div class="card-program">
-            <img class="program-card-image" src="images/icon_prizes.png" alt="card-logo">
-            <h3 class="program-card-title">Prizes</h3>
-            <p class="card-program-paragraph">There will be a lot of challenges and prizes for the most fun people.</p>
-        </div>
-        <div class="card-program">
-            <img class="program-card-image" src="images/icon_surround.png" alt="card-logo">
-            <h3 class="program-card-title">Games</h3>
-            <p class="card-program-paragraph">A lot of activities to spend time with frind or meet people with the same interest.</p>
-        </div>
-    </div>
-    <a class="button" href="">SEE THE WHOLE PROGRAM</a>
-</section>
-<section class="artists-container">
-    <h2 class="title-artist">Artists</h2>
-    <span class="underline"></span> 
-    <div class="artists">
-        
-        
-    </div>
-</section>
-<section class="sponsors" >
-    <h2 class="sponsors-title">Sponsors</h2>
-    <span class="underline"></span>
-    <div class="sponsors-images">
-        <img class="image-sponsor" src="images/sponsor1.png" alt="sponsor 1">
-        <img class="image-sponsor" src="images/sponsor2.png" alt="sponsor 2">
-        <img class="image-sponsor" src="images/sponsor3.png" alt="sponsor 3">
-        <img class="image-sponsor" src="images/sponsor4.png" alt="sponsor 4">
-    
-    </div>
-</section>
-</div>
-`;
-
-const aboutView = `<div class="about">
-<section class="main-info main-info-about">
-    <div class="about-content">
-        <h2 class="main-subtitle about-subtitle">"Hello! Rockers!"</h2>
-        <h1 class="title title-about fire">Rock & Roll 2023 XXX EDITION</h1>
-        <span class="underline"></span>
-        <p class="paragraph-main paragraph-about">Hello, ladies and gentlemen. It is my pleasure to introduce to you the creative mind behind one of the most popular rock festivals in the country. This individual has spent years honing their craft, working tirelessly to bring together some of the most incredible musical acts in the world, all under one roof.</p>
-        <h5 class="main-location">Please contact us per email for any further question about the Rock & Roll Festival</h5>
-        <a class="main-location email" href="">contact@RokAndRollFestival.com</a>
-    </div>
-</section>
-<section class="aditional-info">
-    <h2>ROCK & ROLL FESTIVAL</h2>
-    <span class="underline"></span>
-    <p class="paragraph-about-aditional">
-    This festival creator has a passion for music that is unmatched by anyone else in the industry. They have spent countless hours listening to new and emerging artists, scouring the internet for the latest and greatest in the world of rock music. Their knowledge of the genre is encyclopedic, and they have a keen ear for discovering new talent.
-    
-    Over the years, this festival creator has established themselves as a true visionary in the industry. They have a talent for spotting trends and identifying the next big thing in music. Their ability to curate lineups that are both diverse and cohesive is unparalleled, and their festivals have become a mecca for music lovers from around the world.
-    But this festival creator is more than just a master of curation. They are also a master of logistics. Putting together a festival of this magnitude is no small feat, and it takes a team of dedicated professionals to make it all happen. But this individual has a knack for bringing together the right people and making sure that everything runs smoothly.
-    Perhaps most importantly, this festival creator is passionate about giving back to the community. They understand the power of music to bring people together and to create positive change in the world. That's why they work tirelessly to make sure that their festivals are not just a great time, but also a force for good.
-    In short, this festival creator is a true rock star in their own right. They have dedicated their life to the pursuit of great music and have brought joy to countless fans around the world. We are lucky to have them in our midst, and we can't wait to see what they have in store for us in the years to come. Thank you.</p>
-    <img src="images/logo.png" alt="logo">
-</section>
-<section class="past-versions">
-    <h2>PAST VERSIONS</h2>
-    <span class="underline"></span>
-    <p>Our last two versions:</p>
-    <div class="past-versions-cards">
-        <div class="past-versions-card past1">
-            <h1 class="past-version-title">2022</h1>
-            <p>MADRID</p>
-        </div>
-        <div class="past-versions-card past2">
-            <h1 class="past-version-title">2021</h1>
-            <p>NEY YORK</p>
-        </div>
-    </div>
-</section>
-</div>`;
 function loadHomePage() {
-  main.innerHTML = homeView;
   artists.forEach((artist) => {
     document.querySelector('.artists').innerHTML += `
     <div class="artist-card">
@@ -163,7 +53,6 @@ function loadHomePage() {
       </div>
     </div>`;
   });
-  footer.classList.remove('footer-dark');
 }
 loadHomePage();
 
@@ -175,14 +64,4 @@ hamburguer.addEventListener('click', () => {
 navMain.addEventListener('click', () => {
   hamburguer.classList.toggle('active');
   navMain.classList.toggle('menu_active');
-});
-
-aboutButton.addEventListener('click', () => {
-  footer.classList.toggle('footer-dark');
-  main.innerHTML = aboutView;
-});
-
-logoHome.addEventListener('click', () => {
-  main.innerHTML = homeView;
-  loadHomePage();
 });

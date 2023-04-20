@@ -400,6 +400,10 @@ footer {
   color: var(--gray-color);
 }
 
+#active-nav {
+  color: var(--primary-color);
+}
+
 @media screen and (min-width: 768px) {
   .home {
     padding-top: 0;
@@ -591,5 +595,9 @@ footer {
 
   .footer-logo {
     width: 20%;
+  }
+
+  .footer-text-dark {
+    color: var(--gray-color);
   }
 }
