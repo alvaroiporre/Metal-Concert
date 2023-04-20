@@ -138,15 +138,25 @@ body {
 
 .paragraph-main {
   color: var(--dark-color);
-  background-color: var(--gray-color);
+  background-color: #f3f3f3;
   border: #fff 2px solid;
   padding: 10px;
   margin: 20px 0;
   font-size: medium;
 }
 
-.main-date .main-location {
+.main-date,
+.main-location {
   color: var(--dark-color);
+}
+
+.main-date {
+  font-family: 'COCOGOOSE', sans-serif;
+}
+
+.main-location {
+  font-weight: 700;
+  font-size: large;
 }
 
 .main-program {
@@ -178,6 +188,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   margin: 5% 0;
+  justify-content: center;
 }
 
 .card-program {
@@ -185,6 +196,7 @@ body {
   gap: 5px;
   background-color: rgba(211, 211, 211, 0.1);
   margin-top: 2%;
+  width: 90%;
   align-items: center;
   justify-content: space-around;
   backdrop-filter: blur(1px);
@@ -203,7 +215,7 @@ body {
 .card-program-paragraph {
   width: 50%;
   padding: 10px;
-  font-weight: 300;
+  font-weight: 500;
 }
 
 .button {
@@ -281,7 +293,7 @@ body {
 }
 
 .sponsors-title {
-  color: #fff;
+  color: var(--gray-color);
   padding: 30px;
   padding-bottom: 0;
 }
@@ -380,6 +392,7 @@ footer {
 .footer-content {
   width: 50%;
   text-align: center;
+  color: var(--dark-color);
 }
 
 .footer-dark {
